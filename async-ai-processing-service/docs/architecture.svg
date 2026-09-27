@@ -21,7 +21,7 @@
   </defs>
 
   <rect width="1200" height="720" fill="#f8fafc"/>
-  <text x="600" y="48" text-anchor="middle" class="title">Lab 1 - Asynchronous AI Processing Architecture</text>
+  <text x="600" y="48" text-anchor="middle" class="title">Asynchronous AI Processing Architecture</text>
   <text x="600" y="75" text-anchor="middle" class="subtitle">RabbitMQ provides durable messaging, bounded retries, and dead-letter isolation</text>
 
   <rect x="40" y="155" width="160" height="110" class="box" fill="#e0f2fe" stroke="#0284c7"/>

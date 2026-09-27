@@ -1,6 +1,6 @@
 # Architecture Diagram
 
-![Lab 1 asynchronous AI architecture](architecture.svg)
+![Asynchronous AI processing architecture](architecture.svg)
 
 ## Message flow
 

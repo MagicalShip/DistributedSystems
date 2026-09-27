@@ -10,7 +10,7 @@ from messaging import TASK_QUEUE, declare_topology
 from storage import get_result, save_result
 
 
-app = FastAPI(title="Lab 1 Async AI Processing Service")
+app = FastAPI(title="Async AI Processing Service")
 
 
 class ProcessRequest(BaseModel):
