@@ -1,5 +1,6 @@
 import json
 import os
+import time
 
 import pika
 import requests
@@ -14,6 +15,7 @@ OLLAMA_URL = os.getenv(
 )
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2:1b")
 MAX_RETRIES = 3
+PROCESSING_DELAY_SECONDS = float(os.getenv("PROCESSING_DELAY_SECONDS", "0"))
 
 
 def call_ollama(text: str) -> str:
@@ -35,6 +37,8 @@ def process_message(channel, method, properties, body):
     request_id = message["id"]
 
     print(f"Processing AI request id={request_id}")
+    if PROCESSING_DELAY_SECONDS > 0:
+        time.sleep(PROCESSING_DELAY_SECONDS)
 
     try:
         ai_result = call_ollama(message["text"])
